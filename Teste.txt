@@ -1,0 +1,9 @@
+      MASTER
+      ANDRE
+      BERTONHA
+      File
+      FileReader
+      FileTest
+
+      Síncrono threads executadas separadamente
+      Assíncrono threads executadas simultaneamente ---> CompletableFuture

@@ -36,7 +36,7 @@ public class StreamTest4Reduce {
         System.out.println(somaSalario.get());
 
         Double somaDouble = Pessoa.bancoDePessoas().stream().filter(p -> p.getSalario() > 4000)
-                .mapToDouble(Pessoa::getSalario)
+                .mapToDouble(Pessoa::getSalario) //.max() .min()
                 .sum();
         System.out.println(somaDouble);
 

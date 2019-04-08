@@ -6,7 +6,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.atomic.DoubleAdder;
 import java.util.stream.Collectors;
+
+class Adder {
+    int sum = 0;
+    public int  add ( int x, int y){
+        sum = x+y;
+        System.out.println(sum);
+        return sum;
+    }
+
+}
 
 public class StreamTest {
     // pegar os 3 primeiros nomes das pessoas com menos de 25 ordenadas pelo nome
@@ -35,13 +46,17 @@ public class StreamTest {
         System.out.println(nomes2);
         System.out.println(
                 pessoas
-                .stream()
+                        .stream()
                         .distinct()
-                .filter(p -> p.getIdade() < 25)
-                .map(Pessoa::getNome)
-                .count()
+                        .filter(p -> p.getIdade() < 25)
+                        .map(Pessoa::getNome)
+                        .count()
         );
 
+
+        System.out.println("teste############################");
+        Adder add = new Adder();
+        System.out.println(add.add(1,2));
 //        pessoas.stream().forEach(System.out::println);
 
         // intermediate (distinct filter) e terminal (forEach count collect)
